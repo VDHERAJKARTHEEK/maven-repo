@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;RedisCache&apos;" deleteContents="true" description="Delete resource &apos;RedisCache&apos;" element1="/RedisCache" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1689677259040"/>
+</session>

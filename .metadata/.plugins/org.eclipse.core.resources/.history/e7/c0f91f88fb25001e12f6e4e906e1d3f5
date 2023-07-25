@@ -1,0 +1,28 @@
+package com.redis.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+
+@Configuration
+public class RedisConfiguration {
+
+	@Bean
+	public JedisConnectionFactory getJedisConnection() {
+		JedisConnectionFactory jcf=new JedisConnectionFactory();
+	//	jcf.setHostName(null);
+		//jcf.setPort(0);
+		//jcf.setPassword(null);
+		return jcf;
+		
+	}
+@Bean
+	public RedisTemplate<String,String> getRedisTemplate(JedisConnectionFactory jcf){
+		RedisTemplate<String,String> rt=new RedisTemplate<> ();
+		rt.setConnectionFactory(jcf);
+		return rt;
+	}
+	}
+
+
